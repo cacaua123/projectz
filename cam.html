@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spider Vision</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <video id="camera" autoplay playsinline></video>
+    <canvas id="detectionCanvas"></canvas>
+
+    <div id="hud">
+
+        <div class="top-left">
+            <div class="title">SPIDER VISION</div>
+            <div class="status">● SYSTEM ONLINE</div>
+        </div>
+
+        <div class="top-right">
+            <div id="clock">00:00:00</div>
+            <div>AI: <span class="online">ACTIVE</span></div>
+        </div>
+
+        <div class="crosshair">
+            <div class="cross-horizontal"></div>
+            <div class="cross-vertical"></div>
+            <div class="center-dot"></div>
+        </div>
+
+        <div class="scan-circle"></div>
+
+        <div class="bottom-left">
+            <div>OBJECTS: <span id="objects">0</span></div>
+            <div>CPU: <span id="cpu">--</span></div>
+            <div>VISION: <span class="online">ONLINE</span></div>
+        </div>
+
+        <div class="bottom-right">
+            <div id="message">SYSTEM READY</div>
+        </div>
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
